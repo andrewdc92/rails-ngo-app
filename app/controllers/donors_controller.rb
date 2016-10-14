@@ -1,4 +1,6 @@
 class DonorsController < ApplicationController
+  before_action :logged_in?, only: [:show]
+
   def index
     @donors= Donor.all
   end
@@ -9,6 +11,7 @@ class DonorsController < ApplicationController
 
   def create
     @donor= Donor.create(donor_params)
+    login(@donor)
     redirect_to donor_path(@donor)
   end
 
