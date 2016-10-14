@@ -13,84 +13,10 @@
 
     <%= csrf_meta_tags %>
   </head>
-  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-title">Menu</div>
-</div>
-
-<div class="top-bar" id="main-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">U Donate</li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-      <li class="has-submenu">
-        <a href="#">One</a>
-        <ul class="submenu menu vertical" data-submenu>
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Signup</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-  </div>
-</div>
 
   <body>
-    <div class="row collapse expanded">
-    	<div class="small-12 medium-12 large-12 columns">
-    		<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-    		  <ul class="orbit-container">
-                <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-    		    <li class="is-active orbit-slide">
-    		    	<img class="orbit-image" src="http://interactive.wxxi.org/sites/default/files/images/highlights/children_of_haiti.jpg" alt="Space">
-    			  	<span class="orbit-caption"><p>Look at this kid</p></span>
-    		    </li>
-            <li class="orbit-slide">
-    		    	<img class="orbit-image" src="https://spring2013env3400haiti.files.wordpress.com/2013/04/haiti_big.jpg" alt="Space">
-    			  	<span class="orbit-caption"><p>He is Hungry</p></span>
-    		    </li>
-            <li class="orbit-slide">
-    		    	<img class="orbit-image" src="http://www.unocha.org/sites/default/files/OCHA_Category/Top_Stories/haiti_0.JPG" alt="Space">
-    			  	<span class="orbit-caption"><p>Help Him</p></span>
-    		    </li>
-      </ul>
-    		  <nav class="orbit-bullets">
-    		    <button class="is-active" data-slide="0"><span class="show-for-sr">Donate Now.</span><span class="show-for-sr">Current Slide</span></button>
-    		    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-    		    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-    		    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-    		  </nav>
-    		</div>
-    	</div>
-    </div>
-
 
     <%= yield %>
 
   </body>
-  <header class="hero">
-  <h1>Donate Today</h1>
-</header>
-<footer class="footer">
-  <div class="row">
-    <div class="small-12 columns">
-      <p class="slogan">Make a bigger difference</p>
-      <p class="links">
-        <a href="#">Home</a>
-        <a href="#">NGO</a>
-        <a href="#">Donate</a>
-        <a href="#">About</a>
-        <a href="#">Faq</a>
-        <a href="#">Contact</a>
-      </p>
-      <p class="copywrite">Copyright 2016 &copy; </p>
-    </div>
-  </div>
-</footer>
 </html>
