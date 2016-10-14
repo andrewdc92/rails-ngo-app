@@ -6,4 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ngo.create({name:"test", category: "test", website: "test", content: "test"})
+Ngo.destroy_all
+
+Ngo.create({name: "Konbit Mizik", category: "At-Risk Youth", website: "http://www.konbitmizik.org/about-us", content: ""})
+Ngo.create({name: "Omprakash", category: "Disaster Relief", website: "https://omprakash.org/global/haiti-communitere", content: ""})
+Ngo.create({name: "Sakala Haiti", category: "Youth", website: "http://www.sakala-haiti.org/", content: ""})
