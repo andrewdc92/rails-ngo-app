@@ -29,6 +29,7 @@ gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
 gem 'lazy_high_charts'
 
+gem 'kaminari'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
