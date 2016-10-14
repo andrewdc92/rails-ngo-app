@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post "/ngos/:ngo_id/donors", to: "ngo_donors#create", as: "donor_ngos"
 
   get '/login', to: 'sessions#new', as: "login"
-  post '/sessions' to: 'sessions#create', as: "sessions"
+  post '/sessions', to: 'sessions#create', as: "sessions"
   get '/logout', to: 'sessions#destroy'
 
 
