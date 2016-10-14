@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014190232) do
+ActiveRecord::Schema.define(version: 20161014204917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20161014190232) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "ngo_donors", force: :cascade do |t|
+    t.integer  "donor_id"
+    t.integer  "ngo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["donor_id"], name: "index_ngo_donors_on_donor_id", using: :btree
+    t.index ["ngo_id"], name: "index_ngo_donors_on_ngo_id", using: :btree
+  end
+
   create_table "ngos", force: :cascade do |t|
     t.string   "name"
     t.string   "category"
@@ -33,4 +42,6 @@ ActiveRecord::Schema.define(version: 20161014190232) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "ngo_donors", "donors"
+  add_foreign_key "ngo_donors", "ngos"
 end

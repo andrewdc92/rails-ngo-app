@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ngo.create({name:"test", category: "test", website: "test", content: "test"})
+ngo1 = Ngo.create({name:"test", category: "test", website: "test", content: "test"})

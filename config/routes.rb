@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   patch "/ngos/:id", to: "ngos#update"
   delete "/ngos/:id", to: "ngos#destroy"
 
+  get "/ngos/:ngo_id/donors", to: "ngo_donors#index", as: "ngo_donors"
+  post "/ngos/:ngo_id/donors", to: "ngo_donors#create", as: "donor_ngos"
+
 end
