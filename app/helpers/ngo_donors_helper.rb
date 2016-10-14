@@ -1,0 +1,2 @@
+module NgoDonorsHelper
+end
