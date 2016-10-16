@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Ngo.destroy_all
+Donor.destroy_all
+
+Donor.create({first_name: "Andrew", last_name: "C", email: "ac@gmail.com", password: "test"})
 
 Ngo.create({name: "Konbit Mizik", category: "At-Risk Youth", website: "http://www.konbitmizik.org/about-us", content: ""})
 Ngo.create({name: "Omprakash", category: "Disaster Relief", website: "https://omprakash.org/global/haiti-communitere", content: ""})

@@ -1,5 +1,5 @@
 class DonorsController < ApplicationController
-  before_action :logged_in?, only: [:show]
+  # before_action :logged_in?, only: [:show]
 
   def index
     @donors= Donor.all
@@ -11,8 +11,13 @@ class DonorsController < ApplicationController
 
   def create
     @donor= Donor.create(donor_params)
-    login(@donor)
-    redirect_to donor_path(@donor)
+    if @donor.save
+
+      login(@donor)
+      redirect_to donor_path(@donor)
+    end
+    flash[:error]= @donor.errors.full_messages
+    render :new
   end
 
   def show

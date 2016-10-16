@@ -32,6 +32,8 @@ gem 'lazy_high_charts'
 gem 'kaminari'
 gem 'paypal-sdk-rest'
 
+gem 'paypal-sdk-adaptivepayments'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
