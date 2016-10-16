@@ -7,13 +7,13 @@ class NgosController < ApplicationController
     @ngo = Ngo.new
   end
 
-  def show
-    @ngo = Ngo.find_by_id(ngo_id)
-  end
-
   def create
     @ngo = Ngo.create(ngo_params)
     redirect_to ngo_path(@ngo)
+  end
+
+  def show
+    @ngo = Ngo.find_by_id(ngo_id)
   end
 
   def edit
