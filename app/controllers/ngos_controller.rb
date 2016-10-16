@@ -8,7 +8,7 @@ class NgosController < ApplicationController
   end
 
   def show
-    @ngo = Ngo.find_by_id(ngo_id)
+    @ngo = Ngo.friendly.find_by_id(ngo_id)
   end
 
   def create
@@ -36,7 +36,7 @@ class NgosController < ApplicationController
 
   private
   def ngo_params
-    params.require(:ngo).permit(:name, :content, :website, :category)
+    params.require(:ngo).permit(:name, :content, :website, :category, :slug)
   end
 
   def ngo_id
