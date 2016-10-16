@@ -31,6 +31,8 @@ gem 'lazy_high_charts'
 
 gem 'kaminari'
 
+gem 'paypal-sdk-rest'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
