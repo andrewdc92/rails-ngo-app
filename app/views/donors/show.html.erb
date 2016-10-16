@@ -1,0 +1,22 @@
+<h1>Donors#show</h1>
+
+<div>
+
+  <%= "Welcome," @donor.first_name, @donor.last_name %>
+  <br>
+  <br>
+  Joined <%= @donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
+  <% if @donor == current_user %>
+    <%= button_to "Edit Profile", edit_user_path, method: "get" %>
+  <% end %>
+
+  <br>
+  <h2>NGOs:</h2>
+    <%= @ngo.name %>
+    <%= @ngo.category %>
+    <%= @ngo.website
+  <% end %>
+    <h3> <%= link_to @ngo.website %> </h3>
+  <% end %>
+
+</div>
