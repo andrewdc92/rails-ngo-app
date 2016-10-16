@@ -10,14 +10,15 @@ class DonorsController < ApplicationController
   end
 
   def create
-    @donor= Donor.create(donor_params)
+    @donor= Donor.new(donor_params)
     if @donor.save
 
       login(@donor)
       redirect_to donor_path(@donor)
+      else
+      flash[:error]= @donor.errors.full_messages
+      render :new
     end
-    flash[:error]= @donor.errors.full_messages
-    render :new
   end
 
   def show
