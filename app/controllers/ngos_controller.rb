@@ -5,6 +5,10 @@ class NgosController < ApplicationController
 
   def new
     @ngo = Ngo.new
+
+    if !admin
+      redirect_to ngos_path
+    end
   end
 
   def create
@@ -18,6 +22,10 @@ class NgosController < ApplicationController
 
   def edit
     @ngo = Ngo.find_by_id(ngo_id)
+
+    if !admin
+      redirect_to ngos_path
+    end
   end
 
   def update
