@@ -3,6 +3,10 @@ module SessionsHelper
     @current_donor ||= Donor.find_by_id(session[:donor_id])
   end
 
+  def admin
+    current_donor && current_donor.admin
+  end
+
   def login(donor)
     session[:donor_id] = donor.id
     @current_donor = donor

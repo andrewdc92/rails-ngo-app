@@ -1,7 +1,5 @@
-<h1>Donors#show</h1>
 
 <div>
-
   <%= @donor.first_name %>
   <br>
   <br>
@@ -9,9 +7,6 @@
   <% if @donor == current_donor %>
     <%= button_to "Edit Profile", edit_donor_path, method: "get" %>
   <% end %>
-
-  <br>a
+  <br>
   <h2>NGOs:</h2>
-
-
 </div>

@@ -29,10 +29,14 @@ gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
 gem 'lazy_high_charts'
 
+
+gem 'friendly_id'
+
 gem 'kaminari'
 gem 'paypal-sdk-rest'
 
 gem 'paypal-sdk-adaptivepayments'
+
 
 
 # Use Redis adapter to run Action Cable in production
