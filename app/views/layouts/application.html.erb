@@ -8,43 +8,26 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <!-- included vendor modernizr as per foundation rails instructions, does precompiling -->
-
     <%= csrf_meta_tags %>
-
-
-    <ul>
-      <li><a class="active home" href="/">Home</a></li>
-      <li><a href="/donors/new" class="right">Signup</a></li>
-      <li><a href="/login" class="right">Login</a></li>
-
-      <li class="dropdown">
-    <a href="/ngos" class="dropbtn right">NGO</a>
-      <div class="dropdown-content">
-      <a href="/ngos/konbit-mizik">Konbit Mizik</a>
-      <a href="/ngos/Sakala-Bochika">Sakala Bochika</a>
-      <a href="/ngos/Street-Hearts-Haiti">Street Hearts Haiti</a>
-      <a href="/ngos/Just-Haiti">Just Haiti</a>
-      <a href="/ngos/Youhaiti">Youhaiti</a>
-    </div>
-  </li>
-    </ul>
-
-
-
   </head>
 
+      <ul>
+        <li><a class="active home" href="/">Home</a></li>
+        <li><a href="/donors/new" class="right">Signup</a></li>
+        <li><a href="/login" class="right">Login</a></li>
 
-
-
-
-
-
+        <li class="dropdown">
+      <a href="/ngos" class="dropbtn right">NGO</a>
+        <div class="dropdown-content">
+        <a href="/ngos/konbit-mizik">Konbit Mizik</a>
+        <a href="/ngos/Sakala-Bochika">Sakala Bochika</a>
+        <a href="/ngos/Street-Hearts-Haiti">Street Hearts Haiti</a>
+        <a href="/ngos/Just-Haiti">Just Haiti</a>
+        <a href="/ngos/Youhaiti">Youhaiti</a>
+      </div>
+    </li>
+      </ul>
   <body>
-
-
-
 
     <%= yield %>
 
