@@ -4,6 +4,9 @@ class NgosController < ApplicationController
   end
 
   def new
+    if !admin
+      redirect_to ngos_path
+    end
     @ngo = Ngo.new
   end
 
@@ -17,6 +20,9 @@ class NgosController < ApplicationController
   end
 
   def edit
+    if !admin
+      redirect_to ngos_path
+    end
     @ngo = Ngo.find_by_id(ngo_id)
   end
 

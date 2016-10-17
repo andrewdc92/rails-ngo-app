@@ -1,5 +1,5 @@
 class DonorsController < ApplicationController
-  # before_action :logged_in?, only: [:show]
+  before_action :logged_in?, only: [:show, :edit]
 
   def index
     @donors= Donor.all
