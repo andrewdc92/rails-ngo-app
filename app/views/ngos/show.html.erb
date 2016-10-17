@@ -1,6 +1,9 @@
-<h1> <%= @ngo.name %> </h1>
+<center><h1> <%= @ngo.name %> </h1><center>
 <hr>
 <p> <%= @ngo.category %> </p>
 <%= @ngo.content %>
 <hr>
 <%= @ngo.website %>
+<hr>
+<br>
+<%= link_to "Donate Here", @ngo.donate %>
