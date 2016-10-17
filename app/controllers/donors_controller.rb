@@ -5,7 +5,7 @@ class DonorsController < ApplicationController
     if !admin
       redirect_to root_path
     end
-    
+
     @donors= Donor.all
   end
 
@@ -14,9 +14,15 @@ class DonorsController < ApplicationController
   end
 
   def create
-    @donor= Donor.create(donor_params)
-    login(@donor)
-    redirect_to donor_path(@donor)
+    @donor= Donor.new(donor_params)
+    if @donor.save
+
+      login(@donor)
+      redirect_to donor_path(@donor)
+    else
+    flash[:error]= @donor.errors.full_messages
+    redirect_to new_donor_path
+    end
   end
 
   def show
