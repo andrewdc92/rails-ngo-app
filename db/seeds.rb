@@ -9,8 +9,10 @@
 Ngo.destroy_all
 Donor.destroy_all
 
-Donor.create({first_name: "Andrew", last_name: "C", email: "ac@gmail.com", password: "test"})
+Donor.create({first_name: "Andrew", last_name: "C", email: "ac@gmail.com", password_digest: "testttt"})
 
-Ngo.create({name: "Konbit Mizik", category: "At-Risk Youth", website: "http://www.konbitmizik.org/about-us", content: ""})
-Ngo.create({name: "Omprakash", category: "Disaster Relief", website: "https://omprakash.org/global/haiti-communitere", content: ""})
-Ngo.create({name: "Sakala Haiti", category: "Youth", website: "http://www.sakala-haiti.org/", content: ""})
+Ngo.create({name: "Konbit Mizik", category: "At-Risk Youth", website: "http://www.konbitmizik.org/about-us", content: "", donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D5ZQGSQVJL4F8"})
+Ngo.create({name: "Sakala/Bochika", category: "Disaster Relief", website: "http://www.sakala-haiti.org/", content: "", donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X5AJ3UTP9JXK4"})
+Ngo.create({name: "Street Hearts Haiti", category: "Youth", website: "http://www.streetheartshaiti.org/", content: "", donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AA8WR8C6H5JYQ"})
+Ngo.create({name: "Just Haiti", category: "Agricultural/Environmental", website: "http://justhaiti.org/", content: "", donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XCVGYVA6WEP6U"})
+Ngo.create({name: "Youhaiti", category: "Health/Community Organizing", website: "http://youthaiti.org/", content: "", donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KD4TG8DKY47FG"})

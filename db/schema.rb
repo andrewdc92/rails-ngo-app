@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20161017004431) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "slug"
+    t.string   "donate"
     t.index ["slug"], name: "index_ngos_on_slug", unique: true, using: :btree
   end
 

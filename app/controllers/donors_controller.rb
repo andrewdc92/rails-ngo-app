@@ -15,9 +15,10 @@ class DonorsController < ApplicationController
 
       login(@donor)
       redirect_to donor_path(@donor)
-    else
-    flash[:error]= @donor.errors.full_messages
-    redirect_to new_donor_path
+      else
+      flash[:error]= @donor.errors.full_messages
+      render :new
+
     end
   end
 
