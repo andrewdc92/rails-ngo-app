@@ -8,7 +8,7 @@ class NgosController < ApplicationController
   end
 
   def show
-    @ngo = Ngo.friendly.find_by_id(ngo_id)
+    @ngo = Ngo.find_by_slug(ngo_id)
   end
 
   def create

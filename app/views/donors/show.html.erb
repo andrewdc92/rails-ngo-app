@@ -1,0 +1,12 @@
+
+<div>
+  <%= @donor.first_name %>
+  <br>
+  <br>
+  Joined <%= @donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
+  <% if @donor == current_donor %>
+    <%= button_to "Edit Profile", edit_donor_path, method: "get" %>
+  <% end %>
+  <br>a
+  <h2>NGOs:</h2>
+</div>

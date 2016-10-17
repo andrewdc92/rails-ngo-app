@@ -152,3 +152,58 @@
      }
    }
  }
+
+ .navul {
+   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+  height: 44px;
+
+
+ }
+ .navli {
+     float: right;
+     margin: 17px;
+     margin-top: 0px;
+
+ }
+
+ .navli a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.homenavli a {
+   display: block;
+   color: #666;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+
+}
+.navli a:hover:not(.active) {
+    background-color: #ddd;
+}
+.homenavli a:hover:not(.active) {
+    background-color: #ddd;
+}
+.homenavli a.active {
+    color: white;
+    background-color: #4CAF50;
+}
+ .homenavli {
+     float: left;
+     margin:17px;
+      margin-top: 0px;
+ }
+
+ .navbar {
+   margin-top: 0;
+
+
+ }
