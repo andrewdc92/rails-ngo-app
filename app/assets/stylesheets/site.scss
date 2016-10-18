@@ -68,4 +68,23 @@
 }
 .title{
   text-align: center;
+
+@import url('https://fonts.googleapis.com/css?family=Kite+One');
+$font-content: Kite One, sans-serif;
+#contentInfo {
+  font-family: $font-content;
+  width: 75%;
+  h4 {
+    font-family: $font-content;
+    margin-top: 70px;
+    font-size: 35px;
+  }
+  h3 {
+    font-family: $font-content;
+    margin-bottom: 70px;
+  }
+}
+
+body {
+  background-color: #F0E4C9;
 }
