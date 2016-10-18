@@ -18,6 +18,9 @@
  // for presentation only
 
 
+ @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+ $font-heading: Julius Sans One, sans-serif;
+
  $menu-background: #7f0217;
 
  .title-bar {
@@ -214,6 +217,7 @@
     padding: 0;
     overflow: hidden;
     background-color: $menu-background;
+    font-family: $font-heading;
 }
 
 li {
