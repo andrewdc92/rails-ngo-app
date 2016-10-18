@@ -1,9 +1,16 @@
 <center><h1> <%= @ngo.name %> </h1><center>
 <hr>
-<p> <%= @ngo.category %> </p>
-<%= @ngo.content %>
+<p class="category"><strong> Category:<br> </strong> <%= @ngo.category %> </p>
+<p class="content">
+  <strong>About: <br></strong> <%= @ngo.content %>
+</p>
+<div id = "misson">
+  <strong>Mission Statement: <br></strong> <%= @ngo.misson %>
+</div>
 <hr>
 <%= @ngo.website %>
 <hr>
 <br>
-<%= link_to "Donate Here", @ngo.donate %>
+<div id="donateBtn"
+<a href= <%= @ngo.donate %> class="button round">Donate </a>
+</div>
