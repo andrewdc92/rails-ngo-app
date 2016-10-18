@@ -2,6 +2,9 @@ class DonorsController < ApplicationController
   before_action :logged_in?, only: [:show, :edit]
 
   def index
+    if !admin
+      redirect_to root_path
+    end
     @donors= Donor.all
   end
 
@@ -15,10 +18,9 @@ class DonorsController < ApplicationController
 
       login(@donor)
       redirect_to donor_path(@donor)
-      else
-      flash[:error]= @donor.errors.full_messages
-      render :new
-
+    else
+    flash[:error]= @donor.errors.full_messages
+    redirect_to new_donor_path
     end
   end
 
