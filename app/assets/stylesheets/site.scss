@@ -75,11 +75,16 @@
   animation: 20s slider infinite;
 }
 
-
-
+.aboutphoto {
+  margin-left: 50px;
+  margin-right: 50px;
+ text-align: center;
+}
 .aboutphoto img {
-  width: 300px;
+  width: 250px;
   height: 300px;
+  display: inline-block;
+  align-content: center;
 }
 .title{
   text-align: center;
@@ -103,4 +108,9 @@ $font-content: Kite One, sans-serif;
 
 body {
   background-color: #F0E4C9;
+
+.contraband{
+  background-color: white;
+  overflow: hidden;
+
 }
