@@ -1,12 +1,14 @@
+<center><div class="m-x-auto newuser">
 
-<div>
-  <%= @donor.first_name %>
+<div class="medium-12 columns">
+  <%= @donor.first_name %> <%= @donor.last_name %>
   <br>
+  <%= @donor.email %>
   <br>
-  Joined <%= @donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
+  Joined: <%= @donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
   <% if @donor == current_donor %>
     <%= button_to "Edit Profile", edit_donor_path, method: "get" %>
   <% end %>
   <br>
-  <h2>NGOs:</h2>
+</div>
 </div>
