@@ -1,9 +1,20 @@
-<%= form_for @donor, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.email_field :email, placeholder: "Email" %>
+<center><div class="m-x-auto newuser" style="width: 400px;"><center>
+
+<div class="card">
+  <div class="medium-12 columns">
+    <h1 class="title">Sign In Below</h1>
+
+    <%= form_for @donor, url: "/sessions", method: "post" do |f| %>
+      <div>
+        <%= f.email_field :email, placeholder: "Email" %>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <div class="content">
+        <%= f.submit "Log In" %>
+      </div>
+    <% end %>
   </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Log In" %>
-<% end %>
+</div>
+</div>
