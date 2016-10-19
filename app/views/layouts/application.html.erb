@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Ede Men</title>
-
+    <%= analytics_init if GoogleAnalytics.valid_tracker? %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -28,6 +28,7 @@
                 <a href="/ngos/street-hearts-haiti">Street Hearts Haiti</a>
                 <a href="/ngos/just-haiti">Just Haiti</a>
                 <a href="/ngos/youthaiti">Youthaiti</a>
+                <a href="/ngos/heart-in-haiti">Heart in Haiti</a>
               </div>
             </li>
 
@@ -47,6 +48,7 @@
               <li><%= link_to "My Account", donor_path(current_donor) %></li>
               <li><%= link_to "Logout", logout_path %></li>
             <% else %>
+
               <li><a href="/donors/new">Signup</a></li>
               <li><a href="/login">Login</a></li>
             <% end %>

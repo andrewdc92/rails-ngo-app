@@ -55,7 +55,7 @@
 }
 
 #slider {
-  overflow: hidden;
+  overflow: visible;
 }
 
 #slider figure img{
@@ -89,6 +89,13 @@
 .title{
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+$font-heading: Julius Sans One, sans-serif;
+ h1 {
+  font-family: $font-heading;
+}
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Kite+One');
 $font-content: Kite One, sans-serif;
@@ -113,5 +120,10 @@ body {
 .contraband{
   background-color: white;
   overflow: hidden;
+}
 
+.dropdown-content {
+  overflow: visible;
+  position: fixed;
+  z-index: 1;
 }
