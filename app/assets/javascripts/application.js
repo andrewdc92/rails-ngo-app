@@ -23,3 +23,21 @@
 $(document).foundation();
 
 $(function(){ $(document).foundation(); });
+
+// google.charts.load('upcoming', {'packages':['geomap']});
+//     google.charts.setOnLoadCallback(drawMap);
+//
+//       function drawMap() {
+//         var data = google.visualization.arrayToDataTable([
+//           ['City', 'Popularity']
+//         ]);
+//
+//         var options = {};
+//         options['region'] = 'Haiti';
+//         options['colors'] = [0xFF8747];
+//         options['dataMode'] = 'markers';
+//
+//         var container = document.getElementById('map_canvas');
+//         var geomap = new google.visualization.GeoMap(container);
+//         geomap.draw(data, options);
+//       };
