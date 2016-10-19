@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/donors', to: "donors#create"
   get '/donors/:id/edit', to: "donors#edit", as: "edit_donor"
   patch '/donors/:id', to: "donors#update"
-  delete '/donors/:id', to: "donors#destroy"
+  delete '/donors/:id', to: "donors#destroy", as: "destroy_donor"
 
   get "/ngos", to: "ngos#index", as: "ngos"
   get "/ngos/:id", to: "ngos#show", as: "ngo"
