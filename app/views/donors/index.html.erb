@@ -1,1 +1,29 @@
-<h1>Donors#index</h1>
+
+<% if current_donor && current_donor.admin %>
+<div class='row'>
+
+    <% @donors.each do |donor| %>
+    <div class="large-6 columns">
+      <div class="card">
+        <div>
+          <strong>Donor Name: </strong><%= donor.first_name %> <%= donor.last_name %>
+        </div>
+        <div>
+          <strong>Donor Email: </strong><%= donor.email %>
+        </div>
+        <div>
+          <strong>Donor Since: </strong><%= donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
+        </div>
+        <br>
+        <div>
+          <%= button_to "Show Profile", donor_path(donor), method: "get" %>
+          <%= button_to "Delete Donor", destroy_donor_path(donor), method: "delete", data: {confirm: "Are you sure you want to delete this donor?"} %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<% else %>
+  Looks like something went wrong :(
+<% end %>

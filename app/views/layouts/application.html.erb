@@ -4,33 +4,56 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title>Ede Men</title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
   </head>
   <body>
     <header>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/donors/new">Signup</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/donate">Donate</a></li>
+      <nav>
+        <ul>
+          <li><a href="/">Ede Men</a></li>
+          <div class="top-bar-right">
 
-      <li class="dropdown">
-    <a href="/ngos" class="dropbtn">NGO</a>
-      <div class="dropdown-content">
+            <li><%= link_to "Donate", donate_path %></li>
 
-      <a href="/ngos/konbit-mizik">Konbit Mizik</a>
-      <a href="/ngos/sakala-bochika">Sakala Bochika</a>
-      <a href="/ngos/street-hearts-haiti">Street Hearts Haiti</a>
-      <a href="/ngos/just-haiti">Just Haiti</a>
-      <a href="/ngos/youthaiti">Youthaiti</a>
-    </div>
-    </li>
-    </ul>
-  </header>
+            <li class="dropdown">
+              <a href="/ngos" class="dropbtn">NGOs</a>
+              <div class="dropdown-content">
+                <a href="/ngos/konbit-mizik">Konbit Mizik</a>
+                <a href="/ngos/sakala-bochika">Sakala Bochika</a>
+                <a href="/ngos/street-hearts-haiti">Street Hearts Haiti</a>
+                <a href="/ngos/just-haiti">Just Haiti</a>
+                <a href="/ngos/youthaiti">Youthaiti</a>
+              </div>
+            </li>
+
+            <li><%= link_to "Contributors", contributors_path %></li>
+            <% if current_donor && current_donor.admin %>
+              <li><%= link_to "My Account", donor_path(current_donor) %></li>
+
+              <li class="dropdown">
+                <a class="dropbtn">Admin Tools</a>
+                <div class="dropdown-content">
+                  <%= link_to "Site Donors", donors_path %>
+                </div>
+              </li>
+
+              <li><%= link_to "Logout", logout_path %></li>
+            <% elsif current_donor %>
+              <li><%= link_to "My Account", donor_path(current_donor) %></li>
+              <li><%= link_to "Logout", logout_path %></li>
+            <% else %>
+              <li><a href="/donors/new">Signup</a></li>
+              <li><a href="/login">Login</a></li>
+            <% end %>
+          </div>
+        </ul>
+      </nav>
+    </header>
 
     <%= yield %>
 
@@ -39,13 +62,11 @@
         <div class="small-12 columns">
           <p class="slogan">Make a bigger difference</p>
           <p class="links">
-            <a href="#">Home</a>
-            <a href="#">NGO</a>
-            <a href="#">Donate</a>
-            <a href="#">About</a>
-            <a href="#">Faq</a>
-            <a href="#">Contact</a>
-            </p>
+            <a href="/">Home</a>
+            <a href="/ngos">NGOs</a>
+            <a href="/donate">Donate</a>
+            <a href="/contributors">Contributors</a>
+          </p>
           <p class="copyright">Copyright 2016 &copy; </p>
         </div>
       </div>

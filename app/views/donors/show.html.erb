@@ -1,12 +1,16 @@
-
-<div>
-  <%= @donor.first_name %>
-  <br>
-  <br>
-  Joined <%= @donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
-  <% if @donor == current_donor %>
-    <%= button_to "Edit Profile", edit_donor_path, method: "get" %>
-  <% end %>
-  <br>
-  <h2>NGOs:</h2>
+<div class="row">
+  <div class="medium-5 columns">
+    <div class="card">
+      <h3><%= @donor.first_name %> <%= @donor.last_name %></h3>
+      <hr>
+      <strong>Email: </strong><%= @donor.email %>
+      <br>
+      <strong>Joined: </strong><%= @donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
+      <% if current_donor %>
+        <%= button_to "Edit Account", edit_donor_path, method: "get" %>
+        <%= button_to "Delete Account", destroy_donor_path(@donor), method: "delete", data: {confirm: "Are you sure you want to delete your account?"} %>
+      <% end %>
+      <br>
+    </div>
+  </div>
 </div>

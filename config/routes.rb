@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  root to: "site#index", as: "root_path"
-  get '/donate', to: 'site#show'
+  root to: "site#index", as: "root"
+
+  get '/donate', to: 'site#show', as: "donate"
   get '/contributors', to: 'site#contributors', as: "contributors"
+  
   get '/login', to: 'sessions#new', as: "login"
   post '/sessions', to: 'sessions#create', as: "sessions"
-  get '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy', as: "logout"
 
   get '/donors', to: "donors#index", as: "donors"
   get '/donors/new', to: 'donors#new', as: 'new_donor'
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   post '/donors', to: "donors#create"
   get '/donors/:id/edit', to: "donors#edit", as: "edit_donor"
   patch '/donors/:id', to: "donors#update"
-  delete '/donors/:id', to: "donors#destroy"
+  delete '/donors/:id', to: "donors#destroy", as: "destroy_donor"
 
   get "/ngos", to: "ngos#index", as: "ngos"
   get "/ngos/:id", to: "ngos#show", as: "ngo"

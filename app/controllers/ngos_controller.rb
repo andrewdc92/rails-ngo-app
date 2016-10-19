@@ -8,6 +8,10 @@ class NgosController < ApplicationController
       redirect_to ngos_path
     end
     @ngo = Ngo.new
+
+    if !admin
+      redirect_to ngos_path
+    end
   end
 
   def show
@@ -24,6 +28,10 @@ class NgosController < ApplicationController
       redirect_to ngos_path
     end
     @ngo = Ngo.find_by_id(ngo_id)
+
+    if !admin
+      redirect_to ngos_path
+    end
   end
 
   def update

@@ -1,18 +1,24 @@
-<h1>Donors#new</h1>
 <center><div class="m-x-auto newuser" style="width: 400px;"><center>
-<%= form_for @donor do |f| %>
-  <div>
-    </span><%= f.text_field :first_name, placeholder: "First Name" %>
+<div class="card">
+  <div class="medium-12 columns">
+    <h1 class="title">Sign Up Below</h1>
+      <%= form_for @donor do |f| %>
+        <div>
+          <%= f.text_field :first_name, placeholder: "First Name" %>
+        </div>
+        <div>
+          <%= f.text_field :last_name, placeholder: "Last Name" %>
+        </div>
+        <div>
+          <%= f.email_field :email, placeholder: "Email" %>
+        </div>
+        <div>
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+        <div class="content">
+          <%= f.submit "Sign Up" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
-  </div>
-  <div>
-    <%= f.email_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Sign Up" %>
-<% end %>
 </div>
