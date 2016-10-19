@@ -1,3 +1,116 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@keyframes slider{
+
+0%{
+  left: 0;
+}
+
+20%{
+  left: 0;
+}
+
+25%{
+  left: -100%;
+}
+45%{
+  left: -100%;
+}
+
+
+50%{
+  left: -200%;
+}
+70%{
+  left: -200%;
+}
+
+75% {
+  left: -300%;
+}
+
+95%{
+  left: -400%;
+}
+100%{
+  left: -400%;
+}
+
+}
+#donatePage {
+  text-align: justify;
+  padding: 20px;
+}
+
+.paypalImg {
+  border-radius: 25px;
+  padding-top: 20px;
+}
+
+#ppLink {
+  font-size: 10px;
+}
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure img{
+  width: 20%;
+  float: left;
+  height: 500px;
+}
+
+
+#slider figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 20s slider infinite;
+}
+
+.aboutphoto {
+  margin-left: 50px;
+  margin-right: 50px;
+ text-align: center;
+}
+.aboutphoto img {
+  width: 250px;
+  height: 300px;
+  display: inline-block;
+  align-content: center;
+}
+.title{
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Kite+One');
+$font-content: Kite One, sans-serif;
+#contentInfo {
+  font-family: $font-content;
+  width: 75%;
+  h4 {
+    font-family: $font-content;
+    margin-top: 70px;
+    font-size: 35px;
+  }
+  h3 {
+    font-family: $font-content;
+    margin-bottom: 70px;
+  }
+}
+
+body {
+  background-color: #F0E4C9;
+
+.contraband{
+  background-color: white;
+  overflow: hidden;
+
+}

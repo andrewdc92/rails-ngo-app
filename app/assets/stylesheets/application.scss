@@ -12,13 +12,18 @@
  *
  *= require_tree .
  *= require_self
+//= require foundation_and_overrides
+
  *= require foundation_and_overrides
 
  */
  // for presentation only
 
 
- $menu-background: #7f0217;
+ @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+ $font-heading: Julius Sans One, sans-serif;
+
+ $menu-background: #2E4159;
 
  .title-bar {
    background: $menu-background;
@@ -48,6 +53,20 @@
      display: none !important;
    }
  }
+
+ .container {
+   background-color: white;
+    #contentInfo {
+      padding-left: 100px;
+      width: 66%;
+    }
+    #twitter {
+      padding-right: 100px;
+      padding-top: 80px;
+      width: 30%;
+    }
+}
+
 
  @media only screen and (min-width: 40em) {
    .menu:last-child {
@@ -120,19 +139,19 @@
  }
 
  .footer {
-   background-color: #292c2f;
+   background-color: #2E4159;
    text-align: center;
-   font-size: 1.2rem;
-   padding: 4rem;
+   font-size: 1.0rem;
+   padding: .5rem;
    p {
      &.slogan {
        color: #8d9093;
-       font-size: 1.8rem;
+       font-size: 1.0rem;
        margin: 0 0 1rem;
      }
      &.copywrite {
        color: #8f9296;
-       font-size: 0.875rem;
+       font-size: 0.8rem;
        margin: 0;
      }
    }
@@ -214,6 +233,7 @@
     padding: 0;
     overflow: hidden;
     background-color: $menu-background;
+    font-family: $font-heading;
 }
 
 li {

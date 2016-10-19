@@ -1,0 +1,27 @@
+<div id="donatePage">
+
+<center><h1>Donate</h1>
+
+All donation portals within our application utilize Paypal's technology and link directly to the non-profit's respective Paypal accounts.
+The security, encrpytion, and privacy exceeds the industry standard as Paypal has proven to be a successul method to
+transfer funds effeciently and with minimal fees (only to cover currency conversion). Paypal operates in over 200 countries and handles 25 different currencies, and you can read more about Paypal's benefits and security <a href="https://www.paypal.com/us/webapps/mpp/paypal-safety-and-security"> here </a>
+
+<div>
+  <%= image_tag("paypalinfo.jpeg", size:"1000x1500", :class => "paypalImg", alt: "Paypal Website Img" ) %>
+</div>
+<p id="ppLink"> <a href="https://www.paypal.com/us/webapps/mpp/donations"> Learn more here. </a></p>
+
+<div class="row">
+  <% @ngos.each do |ngo| %>
+  <div class="large-2 columns">
+    <div id="allNames">
+        <%= ngo.name %>
+    </div>
+
+    <div id="allBtns">
+         <a href= <%= ngo.donate %> class="button round">Donate </a>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>

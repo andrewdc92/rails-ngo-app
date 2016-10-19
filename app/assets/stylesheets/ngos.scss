@@ -2,16 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+$font-heading: Julius Sans One, sans-serif;
+
 .container {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
-  background-color: #3CA2A2
+  background-color: #3CA2A2;
+  #title {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-family: $font-heading;
+    font-size: 70px;
+    color: #F0E4C9;
+    letter-spacing: 5px;
+    border-bottom: 2px solid #F0E4C9;
+    border-top: 2px solid #F0E4C9;
+  }
+  .ngo-pic {
+    transition: all .2s ease-in-out;
+  }
+  .ngo-pic:hover {
+      transform: scale(1.2);
+    }
 }
 
-img {
+.row#top {
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+}
 
+.row#bottom {
+  padding-top: 30px;
+}
+
+.container img {
+  border-radius: 3%;
+}
+
+#misson {
+  text-align: justify;
+  padding: 0px 20px 0px 20px;
+}
+.category {
+  text-align: justify;
+  padding: 0px 20px 0px 20px;
+}
+.content {
+  text-align: justify;
+  padding: 0px 20px 0px 20px;
+}
+#donateBtn, #allBtns a {
+  border-radius: 10px;
+  width: 150px;
 }
 
 #blur {
