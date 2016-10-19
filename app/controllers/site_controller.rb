@@ -1,5 +1,12 @@
 class SiteController < ApplicationController
-  def index
+
+
+  def show
       @ngos = Ngo.all
+
+      render template: "site/donate"
   end
+
+
+
 end

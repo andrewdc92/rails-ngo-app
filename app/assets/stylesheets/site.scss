@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 @keyframes slider{
 
 0%{
@@ -39,6 +40,19 @@
 }
 
 }
+#donatePage {
+  text-align: justify;
+  padding: 20px;
+}
+
+.paypalImg {
+  border-radius: 25px;
+  padding-top: 20px;
+}
+
+#ppLink {
+  font-size: 10px;
+}
 
 #slider {
   overflow: hidden;
@@ -49,6 +63,7 @@
   float: left;
   height: 500px;
 }
+
 
 #slider figure{
   position: relative;
@@ -68,6 +83,7 @@
 }
 .title{
   text-align: center;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Kite+One');
 $font-content: Kite One, sans-serif;

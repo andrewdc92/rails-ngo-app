@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "site#index", as: "root_path"
+  get '/donate', to: 'site#show'
   get '/contributors', to: 'site#contributors', as: "contributors"
   get '/login', to: 'sessions#new', as: "login"
   post '/sessions', to: 'sessions#create', as: "sessions"

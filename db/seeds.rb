@@ -12,12 +12,12 @@
 
 @KonbitMission =
 
-"To harness the universal power of music to empower, educate, and uplift haiti’s most vulnerable youth.
-Konbit Mizik provides free production, video, and career management services to local, underground musical artists in Haiti
+"This orgnaization's misison statement is grounded in the following tenants. Harnessing the universal power of music to empower, educate, and uplift haiti’s most vulnerable youth is the main focus..
+Konbit Mizik provides free production, video, and career management services to local, underground musical artists in Haiti.
 
--To provide educational and vocational training workshops and lectures on professional skills, life skills, music, and academics
+They also provide educational and vocational training workshops on professional skills, life skills, music, and academics.
 
--To mobilize communities throughout Haiti with collective action to address local problems and uplift those least fortunate. At a minimum 75% or more of budget goes towards program services, and a 3rd party accountant in a multi-lingual office audits, reviews, and authorizes all expenses."
+Finally, Konbik Mizik works to mobilize communities throughout Haiti with collective action to address local problems and uplift those least fortunate. At a minimum 75% or more of budget goes towards program services, and a 3rd party accountant in a multi-lingual office audits, reviews, and authorizes all expenses."
 
 @Sakala =
 
