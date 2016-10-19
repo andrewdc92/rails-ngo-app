@@ -6,8 +6,6 @@ class Donor < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: {minimum: 6}
-
 
   def self.confirm(params)
     @donor = Donor.find_by({email: params[:email]})
