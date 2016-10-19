@@ -12,11 +12,11 @@ class SessionsController < ApplicationController
       redirect_to @donor
     else
       flash[:error] = "Incorrect username or password"
-      redirect_to new_session_path
+      redirect_to login_path
     end
   end
 
-  def logout
+  def destroy
     logout
     flash[:notice] = "Sucessfully logged out"
     redirect_to root_path
