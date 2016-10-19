@@ -12,8 +12,9 @@
     <!-- included vendor modernizr as per foundation rails instructions, does precompiling -->
 
     <%= csrf_meta_tags %>
-
-
+  </head>
+  <body>
+    <header>
     <ul>
       <li><a class="active home" href="/">Home</a></li>
       <li><a href="/donors/new" class="right">Signup</a></li>
@@ -28,44 +29,27 @@
       <a href="/ngos/Just-Haiti">Just Haiti</a>
       <a href="/ngos/Youhaiti">Youhaiti</a>
     </div>
-  </li>
+    </li>
     </ul>
-
-
-
-  </head>
-
-
-
-
-
-
-
-  <body>
-
-
-
+  </header>
 
     <%= yield %>
 
+    <footer class="footer">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="slogan">Make a bigger difference</p>
+          <p class="links">
+            <a href="#">Home</a>
+            <a href="#">NGO</a>
+            <a href="#">Donate</a>
+            <a href="#">About</a>
+            <a href="#">Faq</a>
+            <a href="#">Contact</a>
+            </p>
+          <p class="copywrite">Copyright 2016 &copy; </p>
+        </div>
+      </div>
+    </footer>
   </body>
-  <header class="hero">
-  <h1>Donate Today</h1>
-</header>
-<footer class="footer">
-  <div class="row">
-    <div class="small-12 columns">
-      <p class="slogan">Make a bigger difference</p>
-      <p class="links">
-        <a href="#">Home</a>
-        <a href="#">NGO</a>
-        <a href="#">Donate</a>
-        <a href="#">About</a>
-        <a href="#">Faq</a>
-        <a href="#">Contact</a>
-      </p>
-      <p class="copywrite">Copyright 2016 &copy; </p>
-    </div>
-  </div>
-</footer>
 </html>
