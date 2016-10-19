@@ -58,11 +58,18 @@ in their own communities."
 Ngo.destroy_all
 Donor.destroy_all
 
-Donor.create({first_name: "Andrew", last_name: "C", email: "ac@gmail.com", password_digest: "testttt"})
-
 Ngo.create({name: "Konbit Mizik", category: "At-Risk Youth", website: "http://www.konbitmizik.org/about-us", content: @Konbit, donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=D5ZQGSQVJL4F8", misson: @KonbitMission})
 Ngo.create({name: "Sakala/Bochika", category: "At-Risk Youth", website: "http://www.sakala-haiti.org/", content: @Sakala, donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X5AJ3UTP9JXK4", misson: @SakalaMission})
 Ngo.create({name: "Street Hearts Haiti", category: "Youth", website: "http://www.streetheartshaiti.org/", content: @ShHaiti, donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AA8WR8C6H5JYQ", misson: @ShHaitiMission})
 Ngo.create({name: "Just Haiti", category: "Agricultural/Environmental", website: "http://justhaiti.org/", content: @JustHaiti, donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XCVGYVA6WEP6U", misson: @JustHaitiMission})
 Ngo.create({name: "Youthaiti", category: "Health/Community Organizing", website: "http://youthaiti.org/", content: @Youthaiti , donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KD4TG8DKY47FG", misson: @YouthaitiMission})
 Ngo.create({name: "Heart in Haiti", category: "Education", website: "http://heartinhaiti.org/who-we-are/", content: @HeartInHaiti, donate: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6K46CMT6MH674", misson: @HeartInHaitiMission})
+
+50.times do
+  Donor.create(
+    first_name: FFaker::Name.first_name,
+    last_name: FFaker::Name.last_name,
+    email: FFaker::Internet.email,
+    password_digest: FFaker::InternetSE.password
+  )
+end
