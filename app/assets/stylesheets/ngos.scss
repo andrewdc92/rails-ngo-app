@@ -21,13 +21,13 @@ $font-heading: Julius Sans One, sans-serif;
     border-bottom: 2px solid #F0E4C9;
     border-top: 2px solid #F0E4C9;
   }
-  .modalHover:hover {
-      opacity: 1;
-      transition: 1s filter linear;
-      filter: blur(5px);
+  .ngo-pic {
+    transition: all .2s ease-in-out;
+  }
+  .ngo-pic:hover {
+      transform: scale(1.2);
     }
 }
-
 
 .row#top {
   margin-bottom: 20px;
