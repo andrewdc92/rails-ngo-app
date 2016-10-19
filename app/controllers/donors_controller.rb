@@ -4,9 +4,9 @@ class DonorsController < ApplicationController
   def index
     if !admin
       redirect_to root_path
+    else
+      @donors= Donor.all
     end
-
-    @donors= Donor.all
   end
 
   def new
@@ -31,12 +31,13 @@ class DonorsController < ApplicationController
 
   def edit
     @donor = Donor.find_by_id(donor_id)
+
   end
 
   def update
     @donor = Donor.find_by_id(donor_id)
     @donor.update_attributes(donor_params)
-    redirect_to donor_path
+    redirect_to donor_path(@donor)
   end
 
   def destroy
