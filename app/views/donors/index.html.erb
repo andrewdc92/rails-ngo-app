@@ -1,1 +1,23 @@
-<h1>Donors#index</h1>
+<center><h1>Active Donors</h1>
+
+<div class='row'>
+  <% @donors.each do |donor| %>
+  <div class="medium-6 columns">
+    <div class="card">
+      <div>
+      Donor Name: <%= donor.first_name %> <%= donor.last_name %>
+    </div>
+    <div>
+      Donor Email: <%= donor.email %>
+    </div>
+    <div>
+      Donor Since: <%= donor.created_at.localtime.to_formatted_s(:long_ordinal) %>
+    </div>
+    <div>
+      <%= button_to "Show Profile", donor_path(donor), method: "get" %>
+      <%= button_to "Delete Donor", destroy_donor_path(donor), method: "delete", data: {confirm: "Are you sure you want to delete this donor?"} %>
+    </div>
+    </div>
+  </div>
+  <% end %>
+</div>
