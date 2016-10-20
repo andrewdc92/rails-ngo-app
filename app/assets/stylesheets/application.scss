@@ -10,9 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  *= require foundation_and_overrides
+  *= require_self
+ *= require_tree .
+
  */
  // for presentation only
 
@@ -25,6 +27,12 @@
  .title-bar {
    background: $menu-background;
    padding: 0.9rem;
+ }
+
+ .title {
+   line-height: 3rem;
+   font-size: 1.5rem;
+   font-weight: 300;
  }
 
  .top-bar {
@@ -50,20 +58,6 @@
      display: none !important;
    }
  }
-
- .container {
-   background-color: white;
-    #contentInfo {
-      padding-left: 100px;
-      width: 66%;
-    }
-    #twitter {
-      padding-right: 100px;
-      padding-top: 80px;
-      width: 30%;
-    }
-}
-
 
  @media only screen and (min-width: 40em) {
    .menu:last-child {

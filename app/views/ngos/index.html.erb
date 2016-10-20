@@ -17,11 +17,16 @@
 
 
 <% @ngos.each do |ngo| %>
-    <div class="reveal" id="modal<%= ngo.id %>" data-reveal>
+  <div id="modal-text">
+      <div class="reveal" id="modal<%= ngo.id %>" data-reveal>
+    <div class="modaltext">
       <h1><%= ngo.name %></h1>
+      <h4><%= ngo.content %></h4>
+  </div>
     <button class="close-button" data-close aria-label="Close modal" type="button">
       <span aria-hidden="true">&times;</span>
     </button>
-<%= link_to "Learn More", ngo_path(ngo) %>
+<div id="btn-learn"><%= link_to "Learn More", ngo_path(ngo) %></div>
   </div>
+</div>
 <% end %>
