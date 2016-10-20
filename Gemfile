@@ -35,9 +35,10 @@ gem 'paypal-sdk-rest'
 gem 'paypal-sdk-adaptivepayments'
 
 gem 'ffaker'
-
 gem 'lazy_high_charts'
 gem 'chartkick'
+gem 'google-analytics-rails', '1.1.0'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -8,9 +8,11 @@
   <strong>Mission Statement: <br></strong> <%= @ngo.misson %>
 </div>
 <hr>
-<%= @ngo.website %>
+<%= link_to @ngo.website %>
 <hr>
 <br>
 <div id="donateBtn">
+
 <a href= <%= @ngo.donate %> class="button round">Donate </a>
+
 </div>
