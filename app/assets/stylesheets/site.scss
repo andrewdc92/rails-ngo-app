@@ -13,14 +13,14 @@ $font-content: Kite One, sans-serif;
   left: 0;
 }
 
-20%{
+25%{
   left: 0;
 }
 
 25%{
   left: -100%;
 }
-45%{
+50%{
   left: -100%;
 }
 
@@ -28,7 +28,7 @@ $font-content: Kite One, sans-serif;
 50%{
   left: -200%;
 }
-70%{
+75%{
   left: -200%;
 }
 
@@ -36,7 +36,7 @@ $font-content: Kite One, sans-serif;
   left: -300%;
 }
 
-95%{
+100%{
   left: -400%;
 }
 100%{
@@ -81,7 +81,7 @@ $font-content: Kite One, sans-serif;
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 20s slider infinite;
+  animation: 30s slider infinite;
 }
 
 .aboutphoto {

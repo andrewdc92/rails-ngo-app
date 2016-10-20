@@ -26,9 +26,7 @@ class DonorsController < ApplicationController
   end
 
   def show
-    if current_donor
-      @donor = Donor.find_by_id(donor_id)
-    end
+    @donor = Donor.find_by_id(donor_id)
   end
 
   def edit
