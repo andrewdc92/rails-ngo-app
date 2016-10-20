@@ -27,8 +27,6 @@ gem 'foundation-rails'
 
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
-gem 'lazy_high_charts'
-
 gem 'friendly_id'
 
 gem 'kaminari'
@@ -37,6 +35,9 @@ gem 'paypal-sdk-rest'
 gem 'paypal-sdk-adaptivepayments'
 
 gem 'ffaker'
+
+gem 'lazy_high_charts'
+gem 'chartkick'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
