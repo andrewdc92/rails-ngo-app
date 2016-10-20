@@ -78,7 +78,14 @@ $font-heading: Julius Sans One, sans-serif;
   text-align: justify;
   padding: 0px 20px 0px 20px;
 }
-#donateBtn, #allBtns a {
+
+#donateBtn a{
+  border-radius: 10px;
+  width: 150px;
+}
+
+#allBtns a {
+
   border-radius: 10px;
   width: 150px;
 }

@@ -1,37 +1,80 @@
-
+<div id="headerTxt">
+  <center><h1> <a href="/ngos"!>Learn more</a> and <a href="/donate">donate</a> today</h1>
 <div id="slider">
   <figure>
-  <img src="http://interactive.wxxi.org/sites/default/files/images/highlights/children_of_haiti.jpg">
+  <img src="http://interactive.wxxi.org/sites/default/files/images/highlights/children_of_haiti.jpg" alt="Space">
   <img src="https://spring2013env3400haiti.files.wordpress.com/2013/04/haiti_big.jpg" alt="Space">
   <img src="http://www.unocha.org/sites/default/files/OCHA_Category/Top_Stories/haiti_0.JPG" alt="Space">
   <img src="https://spring2013env3400haiti.files.wordpress.com/2013/04/haiti_big.jpg" alt="Space">
   <img src="http://www.unocha.org/sites/default/files/OCHA_Category/Top_Stories/haiti_0.JPG" alt="Space">
 </figure>
 </div>
+</div>
 
 <div class="container">
   <div class="row">
-    <div id="contentInfo" class="small-12 large-8 columns">
-      <h4>HAITI</h4>
-      <div class="small-12 columns">
-        <p> Haiti is the third largest country in the Caribbean that shares the border with the Dominican republic</p>
-          <div id="map"><%=image_tag("haiti-map.jpg", :class => "map-img")%></div>
-        <p>In the last 20 years, Haiti has experienced over <strong>20 major natural disasters</strong></p> <br>
-        <p><strong>Flooding, hurricanes, cholera, and earthquakes</strong> have impeded communities' efforts to return to normalcy</p>
-        <p><strong>10,257 civilian casualties </strong> have been reported over the last 20 years. The Haitian government reported the death toll to have surpassed <strong>230,000 people.</strong></p>
+<div id="contentInfo" class="small-12 large-8 columns">
+  <h4>HAITI</h4>
+  <div class="small-12 columns">
+    <p> Haiti is the third largest country in the Caribbean that shares the border with the Dominican republic</p>
+      <div id="map"><%=image_tag("haiti-map.jpg", :class => "map-img")%></div>
+
+      <p>In the last 20 years, Haiti has experienced over <strong>20 major natural disasters</strong></p> <br>
+      <%= line_chart @countries.group(:year).count, height: '300px', colors: ["#2E4159"], library: {
+        title: {text: 'Disaster Timeline', x: -20},
+        yAxis: {
+           allowDecimals: false,
+           title: {
+               text: 'Occurences'
+           }
+        },
+        xAxis: {
+           title: {
+               text: 'Year'
+           }
+        }
+      }  %>
+
+      <p><strong>Flooding, hurricanes, cholera, and earthquakes</strong> have impeded communities' efforts to return to normalcy</p>
+
+      <%= bar_chart @countries.group(:disaster).count, height: '300px', colors: ["#2E4159"], library: {
+        title: {text: 'Disaster Types by Occurence', x: -20},
+        yAxis: {
+           allowDecimals: false,
+           title: {
+               text: 'Occurences'
+           }
+        },
+        xAxis: {
+           title: {
+               text: 'Disaster Types'
+           }
+        }
+      } %>
+
+      <p><strong>10,257 civilian casualties </strong> have been reported over the last 20 years. The Haitian government reported the death toll to have surpassed <strong>230,000 people.</strong></p>
+
+      <%= pie_chart @countries.group(:disaster).sum(:total_affected), height: '300px', library: {
+        title: {text: 'Total Affected by Disasters', x: -20},
+      } %>
+
+      <%= pie_chart @countries.group(:disaster).sum(:deaths), height: '300px', library: {
+        title: {text: 'Deaths by Disasters', x: -20} }%>
+
+      <%= pie_chart @countries.group(:disaster).sum(:affected), height: '300px', library: {
+        title: {text: 'Affected by Disasters', x: -20} }%>
+
+      <%= pie_chart @countries.group(:disaster).sum(:injured), height: '300px', library: {
+        title: {text: 'Injured by Disasters', x: -20} }%>
+
+      <%= pie_chart @countries.group(:disaster).sum(:homeless), height: '300px', library: {
+        title: {text: 'Displaced by Disasters', x: -20} }%>
+
         <p>Most internation non-profits create a rallying cry around national disasters, however research has shown these non-profits were <strong>incredibly ineffective</strong> in changing local Haitian communities</p>
-          <!-- <div id="regions_div" style="width: 900px; height: 500px;"></div> -->
-      <!-- Flooding, hurricanes, cholera, and earthquakes have impeded communities' continual efforts to return to normalcy.<br>
-      There were 10,257 civilian casualties over that 20 year time span, not including the 2010 earthquake.<br>
-      The Haitian government reported the death toll to have surpassed 230,000 people after the second quake passed.
-      <br>
-      <br>
-      Most international non-profits create a rallying cry around natural disasters to bootstrap donations, <br>
-      but over time 3rd party analysis, along with investigative journalism, determined that many international non-profits were incredibly ineffective <br>
-      in bringing meaningful changes to communities that were not understood by the employees who lacked the shared lived experience.
-      <br>
-      <br> -->
-        <p>How can you make a contribution that matters?</p>
+        <p>How can you make a contribution that <strong>matters</strong>?</p>
+        <p>We at Ede Men have <strong>researched</strong> and <strong>targeted</strong> multiple local Haitian NGOs that are known to be the most <strong>effective</strong> and <strong>impactful</strong> with their funding.<br>
+        <br>Through Ede Men, you can view each NGO and make your contribution <strong>directly</strong> to them, at no cost to us!</p>
+        <center><h1> <a href="/ngos"!>Learn more</a> and <a href="/donate">donate</a> today</h1>
       </div>
     </div>
       <div id="twitter" class="large-3 columns">

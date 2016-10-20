@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,8 +28,6 @@ gem 'foundation-rails'
 
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
-gem 'lazy_high_charts'
-
 gem 'friendly_id'
 
 gem 'kaminari'
@@ -37,6 +36,10 @@ gem 'paypal-sdk-rest'
 gem 'paypal-sdk-adaptivepayments'
 
 gem 'ffaker'
+gem 'lazy_high_charts'
+gem 'chartkick'
+gem 'google-analytics-rails', '1.1.0'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
