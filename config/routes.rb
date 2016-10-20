@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/donate', to: 'site#show', as: "donate"
   get '/contributors', to: 'site#contributors', as: "contributors"
-  
+
   get '/login', to: 'sessions#new', as: "login"
   post '/sessions', to: 'sessions#create', as: "sessions"
   get '/logout', to: 'sessions#destroy', as: "logout"
@@ -27,5 +27,8 @@ Rails.application.routes.draw do
 
   get "/ngos/:ngo_id/donors", to: "ngo_donors#index", as: "ngo_donors"
   post "/ngos/:ngo_id/donors", to: "ngo_donors#create", as: "donor_ngos"
+
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/500", :to => "errors#internal_server_error", :via => :all
 
 end

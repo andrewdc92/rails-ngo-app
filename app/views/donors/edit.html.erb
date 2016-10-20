@@ -5,7 +5,7 @@
 
     <h3 class="title">Edit your Profile Below</h3>
 
-  <% if @donor.id == current_donor.id %>
+  <% if @donor.id == current_donor.id || current_donor.admin %>
     <%= form_for @donor, method: "patch" do |f| %>
       <div>
         <%= f.text_field :first_name, placeholder: "First Name" %>

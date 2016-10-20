@@ -15,17 +15,13 @@
 //= require foundation
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
-//= require highcharts/highstock
 //= require chartkick
-//= require turbolinks
 //= require_tree .
 
 
 $(document).foundation();
 
 $(function(){ $(document).foundation();
-  $('#myModal').foundation('reveal', 'open');
-  $('#modal').foundation('reveal', 'close');
  });
 
 // google.charts.load('upcoming', {'packages':['geomap']});

@@ -13,14 +13,14 @@ $font-content: Kite One, sans-serif;
   left: 0;
 }
 
-20%{
+25%{
   left: 0;
 }
 
 25%{
   left: -100%;
 }
-45%{
+50%{
   left: -100%;
 }
 
@@ -28,7 +28,7 @@ $font-content: Kite One, sans-serif;
 50%{
   left: -200%;
 }
-70%{
+75%{
   left: -200%;
 }
 
@@ -36,7 +36,7 @@ $font-content: Kite One, sans-serif;
   left: -300%;
 }
 
-95%{
+100%{
   left: -400%;
 }
 100%{
@@ -45,10 +45,6 @@ $font-content: Kite One, sans-serif;
 
 }
 
-
-#twitter {
-
-}
 #donatePage{
   text-align: justify;
   padding: 20px;
@@ -81,7 +77,7 @@ $font-content: Kite One, sans-serif;
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 20s slider infinite;
+  animation: 30s slider infinite;
 }
 
 .aboutphoto {
@@ -118,12 +114,12 @@ $font-content: Kite One, sans-serif;
 .container {
   background-color: white;
    #contentInfo {
-     padding-left: 100px;
      width: 66%;
+     padding-left: 25px;
    }
    #twitter {
-     padding-right: 100px;
-     padding-top: 80px;
+     padding-right: 25px;
+     padding-top: 25px;
      width: 30%;
    }
 }
@@ -131,9 +127,10 @@ $font-content: Kite One, sans-serif;
 $font-heading: Julius Sans One, sans-serif;
  h1 {
   font-family: $font-heading;
+ a {
+  color: #3CA2A2;
 }
-
-
+}
 
 #contentInfo {
   width: 75%;
