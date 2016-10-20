@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+$font-heading: Julius Sans One, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Kite+One');
+$font-content: Kite One, sans-serif;
 
 @keyframes slider{
 
@@ -40,7 +44,12 @@
 }
 
 }
-#donatePage {
+
+
+#twitter {
+
+}
+#donatePage{
   text-align: justify;
   padding: 20px;
 }
@@ -79,30 +88,74 @@
   margin-left: 50px;
   margin-right: 50px;
  text-align: center;
-}
+ }
 .aboutphoto img {
   width: 250px;
   height: 300px;
   display: inline-block;
   align-content: center;
 }
-.title{
+.title {
   text-align: center;
+  font-family: $font-heading;
+  font-size: 1.5;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 4px solid #2E4159;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Kite+One');
-$font-content: Kite One, sans-serif;
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #272727;
+  background-color: white;
+  border-radius: 2px;
+  margin: 10%;
+  padding: 5%;
+}
+
+.container {
+  background-color: white;
+   #contentInfo {
+     padding-left: 100px;
+     width: 66%;
+   }
+   #twitter {
+     padding-right: 100px;
+     padding-top: 80px;
+     width: 30%;
+   }
+}
+
 #contentInfo {
-  font-family: $font-content;
   width: 75%;
+  font-family: $font-heading;
   h4 {
-    font-family: $font-content;
-    margin-top: 70px;
-    font-size: 35px;
+    font-family: $font-heading;
+    color: #2E4159;
+    letter-spacing: 8px;
+    text-align: center;
+    font-size: 100px;
+    border-bottom: 5px solid #F0E4C9;
+    padding-bottom: 10px;
   }
   h3 {
-    font-family: $font-content;
     margin-bottom: 70px;
+  }
+  .map-img {
+    width: 100%;
+    height: 380px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  p {
+    font-family: $font-heading;
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 40px;
+    border-bottom: 4px dashed #F0E4C9;
+    padding-top: 40px;
   }
 }
 
@@ -114,4 +167,35 @@ body {
   background-color: white;
   overflow: hidden;
 
+}
+
+@media only screen and (max-width: 500px) {
+  .aboutphoto img {
+    max-height: 200px;
+  }
+  h1.title {
+    font-size: 35px;
+  }
+  .top-bar-right {
+    float: none;
+  }
+  .aboutphoto.card {
+    margin: 10%;
+    padding: 3%;
+  }
+  #twitter {
+    display: none;
+    width: 0;
+  }
+  .container #contentInfo {
+    padding-left: 0;
+    font-size: 15px;
+    width: 100%;
+    h4 {
+      font-size: 35px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
 }
