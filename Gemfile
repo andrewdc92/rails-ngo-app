@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'foundation-rails'
 
+
+
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
 
 gem 'friendly_id'
