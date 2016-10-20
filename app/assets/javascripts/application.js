@@ -23,8 +23,6 @@
 $(document).foundation();
 
 $(function(){ $(document).foundation();
-  $('#myModal').foundation('reveal', 'open');
-  $('#modal').foundation('reveal', 'close');
  });
 
 // google.charts.load('upcoming', {'packages':['geomap']});
