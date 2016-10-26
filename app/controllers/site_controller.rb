@@ -10,7 +10,4 @@ class SiteController < ApplicationController
 
       render template: "site/donate"
   end
-
-
-
 end
