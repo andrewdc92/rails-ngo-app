@@ -45,10 +45,6 @@ $font-content: Kite One, sans-serif;
 
 }
 
-
-#twitter {
-
-}
 #donatePage{
   text-align: justify;
   padding: 20px;
@@ -118,12 +114,12 @@ $font-content: Kite One, sans-serif;
 .container {
   background-color: white;
    #contentInfo {
-     padding-left: 100px;
      width: 66%;
+     padding-left: 25px;
    }
    #twitter {
-     padding-right: 100px;
-     padding-top: 80px;
+     padding-right: 25px;
+     padding-top: 25px;
      width: 30%;
    }
 }
@@ -131,9 +127,10 @@ $font-content: Kite One, sans-serif;
 $font-heading: Julius Sans One, sans-serif;
  h1 {
   font-family: $font-heading;
+ a {
+  color: #3CA2A2;
 }
-
-
+}
 
 #contentInfo {
   width: 75%;

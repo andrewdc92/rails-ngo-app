@@ -11,21 +11,17 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require foundation
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
 //= require chartkick
-//= require turbolinks
 //= require_tree .
 
 
 $(document).foundation();
 
 $(function(){ $(document).foundation();
-  $('#myModal').foundation('reveal', 'open');
-  $('#modal').foundation('reveal', 'close');
  });
 
 // google.charts.load('upcoming', {'packages':['geomap']});
